@@ -1,69 +1,113 @@
-body {
-  margin: 0;
-  font-family: sans-serif;
-  background-color: #FFFFE1;
-  color: #1A1A1A;
-  line-height: 1.6;
+/* ===== Root Branding Colors ===== */
+:root {
+  --yellow: #FFC907;
+  --black: #1A1A1A;
+  --cream: #FFFFE1;
+  --white: #FFFFFF;
+  --gray-text: #4a4a4a;
+  --font-main: 'Proxima Nova', system-ui, sans-serif;
 }
 
+/* ===== Global Styles ===== */
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--white);
+  color: var(--black);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  color: var(--black);
+  margin-top: 0;
+}
+
+p {
+  color: var(--gray-text);
+  font-size: 1rem;
+}
+
+/* ===== Utility Container ===== */
 .container {
-  width: 90%;
   max-width: 960px;
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 2rem 1rem;
   text-align: center;
 }
 
-.hero {
-  background-color: #FFC907;
-  padding: 80px 20px;
-  color: #1A1A1A;
+/* ===== Section Styling ===== */
+.story {
+  background-color: var(--white);
 }
 
-.hero h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
+.impact {
+  background-color: var(--cream);
 }
 
-.hero p {
-  font-size: 1.2em;
-  margin-bottom: 30px;
+.donate {
+  background-color: var(--white);
 }
 
-.cta-button {
-  background-color: #1A1A1A;
-  color: #FFFFE1;
-  padding: 15px 30px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  display: inline-block;
-  transition: background 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #333333;
-}
-
-.story, .donate {
-  background-color: #FFF;
-}
-
+/* ===== Impact Image ===== */
 .impact img {
   width: 100%;
-  height: auto;
   border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+  transition: transform 0.4s ease;
 }
 
+.impact img:hover {
+  transform: scale(1.02);
+}
+
+/* ===== Caption ===== */
 .caption {
-  font-size: 0.95em;
-  margin-top: 10px;
-  color: #555;
+  margin-top: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--black);
 }
 
+/* ===== Button Styling ===== */
+button {
+  background-color: var(--black);
+  color: var(--white);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-family: var(--font-main);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: 1.5rem;
+}
+
+button:hover {
+  background-color: var(--yellow);
+  color: var(--black);
+}
+
+/* ===== Footer ===== */
 footer {
-  background-color: #1A1A1A;
-  color: #FFFFE1;
-  padding: 20px 0;
-  font-size: 0.9em;
+  background-color: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    width: 100%;
+    font-size: 1rem;
+  }
 }
